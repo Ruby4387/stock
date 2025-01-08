@@ -1,5 +1,18 @@
+import subprocess
+import sys
+
+# Define the package you want to install
+package_name = "plotly"
+
+# Use subprocess to run the pip command
+try:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package_name])
+    print(f"{package_name} installed successfully!")
+except subprocess.CalledProcessError as e:
+    print(f"Failed to install {package_name}. Error: {e}")
+
 import streamlit as st
-import plotly as go
+import plotly.graph_objs as go
 import yfinance as yf  # Ensure yfinance is installed
 
 def get_ticker_data(ticker_symbol, data_period, data_interval):
