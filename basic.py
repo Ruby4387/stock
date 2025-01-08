@@ -1,5 +1,5 @@
 import streamlit as st
-import plotly.graph_objs as go
+import plotly as go
 import yfinance as yf  # Ensure yfinance is installed
 
 def get_ticker_data(ticker_symbol, data_period, data_interval):
